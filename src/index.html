@@ -13,10 +13,14 @@
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <script
       src="https://kit.fontawesome.com/4e74fd0580.js"
-      crossorigin="anonymous"
+      
     ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="public/style.css" />
@@ -26,31 +30,32 @@
   <body>
     <canvas id="starryNightCanvas"></canvas>
     <!-- Navbar -->
-    <nav id="navbar">
+    <nav id="navbar" class="section">
       <div class="navbar__logo">
-        <i class="fas fa-leaf"></i>
-        <a href="#">smPark</a>
+        <a href="#">WEB </br> DEVELOPER </br> SMPARK</a>
       </div>
+      <div class="navbar__github"></div>
+      <div class="navbar__email>"></div>
       <ul class="navbar__menu">
         <li class="navbar_menu_item">Home</li>
         <li class="navbar_menu_item">About</li>
         <li class="navbar_menu_item">Skills</li>
         <li class="navbar_menu_item">My works</li>
-        <li class="navbar_menu_item">Testimonials</li>
-        <li class="navbar_menu_item">contact</li>
+        <li class="navbar_menu_item">Contact</li>
+        <li class="navbar_menu_item"><img src="" alt="chatting icon"></li>
       </ul>
     </nav>
     <!-- Guide -->
-    <section id="guide"></section>
+    <section id="guide" class="section"></section>
     <!-- Home -->
-    <section id="Home">
+    <section id="Home" class="section">
       <h1 class="home__title">Hello, <br />I'm smPark</h1>
       <h3 class="home__dscription">
         front-end와 back-end를 넘나드는 개발자입니다.
       </h3>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <h1>About me</h1>
       <p>
         업력 1년차 개발경력 3년차 주니어 개발자입니다. 간단히 제 소개를 드리면
@@ -61,7 +66,7 @@
       <div class="about__majors">
         <div class="major">
           <div class="major__icon"><i class="fab fa-js-square"></i></div>
-          <div class="major__title">Front-end</div>
+          <h2 class="major__title">Front-end</h2>
           <div class="major__description">
             HTML, CSS, JavaScript, TypeScript, <br />
             React Web APIs
@@ -69,7 +74,7 @@
         </div>
         <div class="major">
           <div class="major__icon"><i class="fas fa-server"></i></div>
-          <div class="major__title">Back-end</div>
+          <dh2iv class="major__title">Back-end</dh2iv>
           <div class="major__description">NodeJS, MySQL, MongoDB <br /></div>
         </div>
       </div>
@@ -83,7 +88,7 @@
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -173,7 +178,7 @@
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -189,7 +194,7 @@
       </div>
       <div class="work__projects">
         <a href="#" class="project" target="_blank"
-          ><img src="" alt="" />
+          ><img src="imgs/spaceShip.gif" alt="" />
           <div class="projcet__description">
             <h3>OauthServer</h3>
             <span>OauthServer</span>
@@ -212,7 +217,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact_email">smpark7723@gmail.com</h2>
       <div class="contact__links">
