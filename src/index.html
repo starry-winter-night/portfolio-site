@@ -11,10 +11,6 @@
     />
     <meta name="author" content="smpark" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/4e74fd0580.js"
-      
-    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
       rel="stylesheet"
@@ -23,7 +19,16 @@
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <link href="public/style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4e74fd0580.js"></script>
     <script src="main.js" defer></script>
     <script src="javascript/starryNight.js" defer></script>
     <script src="javascript/rocketGuide.js" defer></script>
@@ -33,38 +38,54 @@
     <!-- Navbar -->
     <nav id="navbar" class="navbar">
       <div class="navbar__logo">
-        <a href="#">WEB </br> DEVELOPER </br> SMPARK</a>
+        <a href="#"
+          >web <br />
+          developer <br />
+          smpark</a
+        >
         <div class="navbar__github"></div>
         <div class="navbar__email>"></div>
       </div>
-      
+
       <div class="navbar__guide">
-        <img src="imgs/earth.png" alt="지구 이미지" class="navbar__earth">
-        <img src="imgs/spaceShip.gif" alt="로켓 이미지" class="navbar__rocket">
-        <img src="imgs/mars.png" alt="화성 이미지" class="navbar__mars">
+        <img src="imgs/earth.png" alt="지구 이미지" class="navbar__earth" />
+        <img
+          src="imgs/spaceShip.gif"
+          alt="로켓 이미지"
+          class="navbar__rocket"
+        />
+        <img src="imgs/mars.png" alt="화성 이미지" class="navbar__mars" />
       </div>
-     
+
       <ul class="navbar__menu">
         <li class="navbar_menu_item">Home</li>
         <li class="navbar_menu_item">About</li>
         <li class="navbar_menu_item">Skills</li>
-        <li class="navbar_menu_item">My works</li>
+        <li class="navbar_menu_item">Works</li>
         <li class="navbar_menu_item">Contact</li>
-        <li class="navbar_menu_item"><img src="" alt="chatting icon"></li>
       </ul>
+      <div class="navbar__smpchat">
+        <img
+          src="imgs/message.png"
+          alt="chatting icon"
+          class="navbar__smpchat_icon"
+        />
+      </div>
     </nav>
-    <!-- Guide -->
-    <section id="guide" class="section"></section>
     <!-- Home -->
-    <section id="Home" class="section">
-      <h1 class="home__title">Hello, <br />I'm smPark</h1>
+    <section id="Home" class="home section">
+      <h1 class="home__title">smpark's portfolio</h1>
+      <img src="imgs/smpark.jpg" alt="owner's picture" />
       <h3 class="home__dscription">
-        front-end와 back-end를 넘나드는 개발자입니다.
+        Hello, <br />
+        welcome to my portfolio.
       </h3>
     </section>
     <!-- About -->
-    <section id="about" class="section">
-      <h1>About me</h1>
+    <section id="about" class="about section">
+      <div class="about__title">
+        <h1>About me</h1>
+      </div>
       <p>
         업력 1년차 개발경력 3년차 주니어 개발자입니다. 간단히 제 소개를 드리면
         저는 외향적인 성격을 가졌으며 그로인해 그룹에서의 원만한 인간관계와
@@ -73,7 +94,9 @@
       </p>
       <div class="about__majors">
         <div class="major">
-          <div class="major__icon"><i class="fab fa-js-square"></i></div>
+          <div class="major__icon">
+            <i class="fab fa-js-square"></i>
+          </div>
           <h2 class="major__title">Front-end</h2>
           <div class="major__description">
             HTML, CSS, JavaScript, TypeScript, <br />
@@ -81,22 +104,28 @@
           </div>
         </div>
         <div class="major">
-          <div class="major__icon"><i class="fas fa-server"></i></div>
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
           <h2 class="major__title">Back-end</h2>
-          <div class="major__description">NodeJS, MySQL, MongoDB <br /></div>
+          <div class="major__description">
+            NodeJS(express, koa), MySQL, <br />MongoDB <br />
+          </div>
         </div>
       </div>
       <div class="about_jobs">
         <div class="job">
           <img src="imgs/irexnet.png" alt="irexnet" class="job__logo" />
-          <li></li>
-          <li></li>
-          <li></li>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills" class="section">
+    <section id="skills" class="skills section">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -169,54 +198,69 @@
             <h3>Tools</h3>
             <div class="skillset__title"></div>
             <ul class="tools__list">
-              <li><span>Visual Studio Code</span></li>
-              <li><span></span></li>
-              <li><span></span></li>
-              <li><span></span></li>
-              <li><span></span></li>
+              <li>
+                <span>Visual Studio Code</span>
+              </li>
+              <li>
+                <span></span>
+              </li>
+              <li>
+                <span></span>
+              </li>
+              <li>
+                <span></span>
+              </li>
+              <li>
+                <span></span>
+              </li>
             </ul>
           </div>
           <div class="etc">
             <h3>Etc</h3>
             <ul class="tools__list">
-              <li><span>Git</span></li>
+              <li>
+                <span>Git</span>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
     <!-- Work -->
-    <section id="work" class="section">
+    <section id="work" class="work section">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
         <button class="category__btn">
-          All<span class="category__count">8</span>
+          All
+          <span class="category__count">8</span>
         </button>
         <button class="category__btn">
-          Front-end<span class="category__count">3</span>
+          Front-end
+          <span class="category__count">3</span>
         </button>
         <button class="category__btn">
-          Back-end<span class="category__count">2</span>
+          Back-end
+          <span class="category__count">2</span>
         </button>
       </div>
       <div class="work__projects">
-        <a href="#" class="project" target="_blank"
-          ><img src="imgs/spaceShip.gif" alt="" />
+        <a href="#" class="project" target="_blank">
+          <img src="imgs/spaceShip.gif" alt="" />
           <div class="projcet__description">
             <h3>OauthServer</h3>
             <span>OauthServer</span>
           </div>
         </a>
-        <a href="#" class="project" target="_blank"
-          ><img src="" alt="" />
+        <a href="#" class="project" target="_blank">
+          <img src="imgs/mars.png" alt="" />
           <div class="projcet__description">
             <h3>OauthServer</h3>
             <span>OauthServer</span>
           </div>
         </a>
-        <a href="#" class="project" target="_blank"
-          ><img src="" alt="" />
+        <a href="#" class="project" target="_blank">
+          <img src="imgs/mars.png" alt="" />
           <div class="projcet__description">
             <h3>OauthServer</h3>
             <span>OauthServer</span>
@@ -225,7 +269,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="contact section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact_email">smpark7723@gmail.com</h2>
       <div class="contact__links">
