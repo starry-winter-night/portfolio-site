@@ -32,13 +32,14 @@
     <script src="main.js" defer></script>
     <script src="javascript/starryNight.js" defer></script>
     <script src="javascript/rocketGuide.js" defer></script>
+    <script src="javascript/moveMenuSection.js" defer></script>
   </head>
   <body>
     <canvas id="starryNightCanvas"></canvas>
     <!-- Navbar -->
     <nav id="navbar" class="navbar">
       <div class="navbar__logo">
-        <a href="#"
+        <a href="index.html"
           >web <br />
           developer <br />
           smpark</a
@@ -60,11 +61,11 @@
     <!-- Aside -->
     <aside id="aside" class="aside">
       <ul class="aside__menu">
-        <li class="aside_menu_item">Home</li>
-        <li class="aside_menu_item">About</li>
-        <li class="aside_menu_item">Skills</li>
-        <li class="aside_menu_item">Works</li>
-        <li class="aside_menu_item">Contact</li>
+        <li class="aside_menu_item" data-id="#home" >Home</li>
+        <li class="aside_menu_item" data-id="#about">About</li>
+        <li class="aside_menu_item" data-id="#skills">Skills</li>
+        <li class="aside_menu_item" data-id="#work">Works</li>
+        <li class="aside_menu_item" data-id="#contact">Contact</li>
       </ul>
       <div class="aside__smpchat">
         <img
@@ -287,7 +288,7 @@
       <p class="contact__guide">
         하단의 <span>아이콘</span>을 클릭하시면 각각 저의 이메일과 깃허브로 연결됩니다.
         <br />
-        오른쪽 하단의 <span>말풍선</span>을 클릭하시면 제가 만든 실시간 채팅 라이브러리를 통해 저와 대화하실 수 있습니다.
+        오른쪽 하단의 <span>말풍선</span>을 클릭하시면 제가 만든 실시간 채팅 라이브러리를 통해 저와 채팅 하실 수 있습니다.
       </p>
       <div class="contact__container">
         <div class="contact__email">

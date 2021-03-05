@@ -126,6 +126,7 @@ body {
   width: 100%;
   display: flex;
   top: 0;
+  z-index: 2;
 }
 
 .navbar__logo {
@@ -174,6 +175,7 @@ body {
   right: 0%;
   width: 15%;
   height: 100%;
+  z-index: 3;
 }
 .aside__menu {
   display: flex;
@@ -275,16 +277,15 @@ body {
 .job {
   text-align: center;
   display: flex;
+  background-color: var(--color-backgroundTransparency);
+  border-radius: 15px;
+  padding: 40px;
+  justify-content: space-around;
 }
 
 .job > ul {
   line-height: 35px;
   text-align: left;
-  justify-content: center;
-  padding-left: 10%;
-  flex-basis: 85%;
-  display: flex;
-  flex-direction: column;
 }
 
 .job > ul > li {
@@ -294,9 +295,10 @@ body {
 }
 
 .about__jobImg {
-  flex-basis: 15%;
   max-width: 110px;
-  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .job__logo {
@@ -483,6 +485,11 @@ body {
 }
 
 /*  Contact  */
+
+.contact > h2 {
+  margin-top:40px;
+}
+
 .contact__title {
   width: 20em;
   height: 120px;
@@ -491,18 +498,19 @@ body {
   margin: auto;
 }
 
+
 .contact__container {
   background-color: var(--color-backgroundTransparency);
   border-radius: 15px;
   padding: 50px;
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   display: flex;
 }
 
 .contact__guide {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 55px;
+  margin-bottom: 55px;
   font-family: "Nanum Gothic Coding", monospace;
   color: var(--color-dark-white);
   font-weight: 100;
@@ -517,9 +525,11 @@ body {
 .contact__email {
   flex-basis: 50%;
   height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+.contact__email a:hover i {
+  transform: scale(1.2);
+  transition: all var(--animation-duration) ease;
 }
 
 .contact__container h2::after {
@@ -538,9 +548,11 @@ body {
 .contact__links {
   flex-basis: 50%;
   height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+.contact__links a:hover i {
+  transform: scale(1.2);
+  transition: all var(--animation-duration) ease;
 }
 
 .contact__container a i {
