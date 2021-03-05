@@ -108,26 +108,24 @@ body {
   color: var(--color-light-white);
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  position: absolute;
-  top: 0;
 }
 
 /*  Section common  */
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 70%;
+  max-width: 1200px;
+  width: 70%;
   margin: auto;
   font-family: "Josefin Sans", sans-serif;
 }
 
 /*  Navbar  */
 .navbar {
-  position: fixed;
+  position: sticky;
   width: 100%;
   display: flex;
   top: 0;
-  padding: 0 0 50px 0;
 }
 
 .navbar__logo {
@@ -169,14 +167,17 @@ body {
 }
 
 /*  Aside  */
-.aside__menu {
+.aside {
   font-family: "sofia_probold";
-  display: flex;
-  flex-direction: column;
   position: fixed;
   top: 3%;
   right: 0%;
   width: 15%;
+  height: 100%;
+}
+.aside__menu {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 90%;
   align-items: center;
@@ -215,7 +216,6 @@ body {
 /*  Home  */
 .home {
   background-color: var(--color-backgroundTransparency);
-  margin-top: 135px;
   border-radius: 15px;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
@@ -416,6 +416,7 @@ body {
 
 .work__projects h2 {
   width: 100%;
+  margin: 35px 0;
 }
 
 .work__projects > h2:after {
@@ -479,4 +480,74 @@ body {
 .projcet__description span {
   padding: 0.5rem;
   font-size: var(--font-small);
+}
+
+/*  Contact  */
+.contact__title {
+  width: 20em;
+  height: 120px;
+  line-height: 130px;
+  border-bottom: 5px solid var(--color-dark-white);
+  margin: auto;
+}
+
+.contact__container {
+  background-color: var(--color-backgroundTransparency);
+  border-radius: 15px;
+  padding: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.contact__guide {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: "Nanum Gothic Coding", monospace;
+  color: var(--color-dark-white);
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.contact > p > span {
+  color: var(--color-orange);
+  font-weight: bold;
+}
+
+.contact__email {
+  flex-basis: 50%;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact__container h2::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: 15px;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+
+.contact__links {
+  flex-basis: 50%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact__container a i {
+  font-size: var(--font-large);
+  margin: 15px 0;
+}
+
+.contact__rights {
+  margin: 0;
 }
