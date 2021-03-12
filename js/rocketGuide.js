@@ -33,6 +33,7 @@ function rocketGuide() {
     function calcHeightValuePercent() {
       return Math.floor((scrollHeight / calcScrollTopMaximum()) * 100);
     }
+    // 스크롤 마다 움직일 pixel
     function calcOnePercentWidthPixel() {
       return (
         (travelRoadWidth -

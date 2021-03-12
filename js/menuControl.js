@@ -48,28 +48,69 @@
     const sections = document.querySelectorAll(".section");
 
     const callback = (entries, observer) => {
+      // 화면 밖으로 나갔을 경우와 load와 동시에 이미 화면 밖에 있는 Ratio 0인 경우가 아닌 경우.
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          changeMenuClass(entry.target.id);
-        } 
+        if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+          changeMenuItemClass(
+            document.querySelector(`[data-id="#${entry.target.id}"]`),
+            entry.boundingClientRect.y
+          );
+          // 현재 위치 클래스 체크 후 수정
+        } else if (entry.isIntersecting && entry.intersectionRatio > 0) {
+          changeMenuItemClass(
+            document.querySelector(`[data-id="#${entry.target.id}"]`)
+          );
+        }
       });
     };
+
+    const REQUEST_TRESHOLD = 0.3;
     const options = {
       root: null,
-      rootMargin: "0px 0px",
-      threshold: 0.55,
+      rootMargin: "0px",
+      threshold: getThresholdMinimumNumber(sections, REQUEST_TRESHOLD),
     };
-
     let observer = new IntersectionObserver(callback, options);
     sections.forEach((dom) => observer.observe(dom));
 
-    function changeMenuClass(id) {
-      const dom = document.querySelector(`[data-id="#${id}"]`);
-      const items = document.querySelector(`.${dom.className}.view`);
-      if (items && dom !== items) {
-        items.classList.remove("view");
+    function removeMenuItemClass() {
+      const view = document.querySelector(".aside_menu_item.view");
+      if (view) view.classList.remove("view");
+    }
+    function addMenuItemClass(dom, y) {
+      // scroll down인 경우
+      if (y < 0) {
+        dom.nextElementSibling.classList.add("view");
+        // scroll up인 경우
+      } else if (y > 0) {
+        dom.previousElementSibling.classList.add("view");
+        // 새로고침인 경우
+      } else {
+        dom.classList.add("view");
       }
-      dom.classList.add("view");
+    }
+
+    function changeMenuItemClass(dom, y) {
+      removeMenuItemClass();
+      addMenuItemClass(dom, y);
+    }
+
+    /*  안전 장치  */
+    function getThresholdMinimumNumber(section, threshold) {
+      /* 
+        지정한 rect의 높이의 %가 채워지면 옵저버가 가동한다. 
+        주의할 점은 threshold로 지정한 %만큼의 rect 높이가 root로 지정한 부모 rect(default: viewport)의 
+        높이 보다 높다면 옵저버가 가동되지 않는다.
+        즉, 옵저버거 rect를 놓치지 않게 최소 인식 가능한 threshold 비율을 구해야 한다. 
+      */
+      const browserHeight = window.innerHeight;
+      const highestSectionHeight = Array.from(section)
+        .map((dom) => dom.getBoundingClientRect().height)
+        .sort((a, b) => b - a)[0];
+      const minimumThreshold = browserHeight / highestSectionHeight;
+      return minimumThreshold < threshold
+        ? minimumThreshold.toFixed(2) - 0.03
+        : threshold;
     }
   }
 

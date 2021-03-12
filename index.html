@@ -3,41 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 ,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>smpark's portfolio</title>
     <meta
       name="description"
       content="A developer with a twinkling, starry heart on a winter night."
     />
     <meta name="author" content="smpark" />
-    
-
-
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script defer src="js/starryNight.js"></script>
+    <script defer src="js/rocketGuide.js"></script>
+    <script defer src="js/menuControl.js"></script>
+
+    <link href="public/style.css" rel="stylesheet" />
     <link
+      defer
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
+      defer
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
+      defer
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
+      defer
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
       rel="stylesheet"
     />
-    <link href="public/style.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/4e74fd0580.js"></script>
-    <script src="js/starryNight.js" defer></script>
-    <script src="js/rocketGuide.js" defer></script>
-    <script src="js/menuControl.js" defer></script>    
-
+    
   </head>
   <body>
     <canvas id="starryNightCanvas"></canvas>
@@ -65,8 +69,11 @@
     </nav>
     <!-- Aside -->
     <aside id="aside" class="aside">
+      <button class="aside__menu__btn">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="aside__menu">
-        <li class="aside_menu_item" data-id="#home" >Home</li>
+        <li class="aside_menu_item" data-id="#home">Home</li>
         <li class="aside_menu_item" data-id="#about">About</li>
         <li class="aside_menu_item" data-id="#skills">Skills</li>
         <li class="aside_menu_item" data-id="#work">Works</li>
@@ -79,9 +86,6 @@
           class="aside__smpchat_icon"
         />
       </div>
-      <button class="aside__menu__btn">
-        <i class="fas fa-bars"></i>
-      </button>
     </aside>
     <!-- Home -->
     <section id="home" class="home section">
@@ -99,12 +103,12 @@
         <h1>About me</h1>
       </div>
       <p>
-        안녕하세요. 현재 대전에 거주하는 업력 1년 차 주니어
-        웹 개발자입니다. 운이 좋게도 첫 회사에서 PL로서 Front·back-end를 모두
-        접하며 설계 및 제작을 경험할 수 있었고 다양한 분야의 개발자분들과 많은
-        걸 배우고 경험하며 즐겁게 일할 수 있었습니다. 다만 웹 개발자는 저와
-        동기뿐이었고 사수 또는 코드리뷰가 없는 환경이었습니다. 업무에는 차질이
-        없었지만, 자신의 코드에 대한 의문과 갈증이 항상 있었고 퇴사 후에 바로
+        안녕하세요. 현재 대전에 거주하는 업력 1년 차 주니어 웹 개발자입니다.
+        운이 좋게도 첫 회사에서 PL로서 Front·back-end를 모두 접하며 설계 및
+        제작을 경험할 수 있었고 다양한 분야의 개발자분들과 많은 걸 배우고
+        경험하며 즐겁게 일할 수 있었습니다. 다만 웹 개발자는 저와 동기뿐이었고
+        사수 또는 코드리뷰가 없는 환경이었습니다. 업무에는 차질이 없었지만,
+        자신의 코드에 대한 의문과 갈증이 항상 있었고 퇴사 후에 바로
         재취업하기보단 자신의 갈증을 채우기 위해 공부하였습니다. 현재 개발에
         대한 열정이 가득 차 있습니다. 서울에 상경하여 좋은 사람들과 멋지고 많은
         경험을 하며 성장하고 싶습니다.
@@ -136,14 +140,17 @@
             <img src="imgs/irexnet.png" alt="irexnet" class="job__logo" />
           </div>
           <ul>
-            <li><span>· </span> (주)아이렉스넷에서 1년 2개월 웹 개발자로 일하였습니다.</li>
             <li>
-              <span>· </span> PLM, 점방(가제), 네이버CLOVA 및 사내 소프트웨어 등을
-              개발하였습니다.
+              <span>· </span> (주)아이렉스넷에서 1년 2개월 웹 개발자로
+              일하였습니다.
             </li>
             <li>
-              <span>· </span> 그 외 업무 조사 및 미팅, K-WATER 시연, 대전대학교 시연 및 발표
-              등을 맡아 하였습니다.
+              <span>· </span> PLM, 점방(가제), 네이버CLOVA 및 사내 소프트웨어
+              등을 개발하였습니다.
+            </li>
+            <li>
+              <span>· </span> 그 외 업무 조사 및 미팅, K-WATER 시연, 대전대학교
+              시연 및 발표 등을 맡아 하였습니다.
             </li>
           </ul>
         </div>
@@ -294,9 +301,12 @@
       </div>
       <h2>E-mail & Chatting</h2>
       <p class="contact__guide">
-        하단의 <span>아이콘</span>을 클릭하시면 각각 저의 이메일과 깃허브로 연결됩니다.
+        하단의 <span>아이콘</span>을 클릭하시면 각각 저의 이메일과 깃허브로
+        연결됩니다.
         <br />
-        오른쪽 하단의 <span>말풍선</span>을 클릭하시면 제가 만든 실시간 채팅 라이브러리를 통해 저와 채팅 하실 수 있습니다. <br> 감사합니다. :D
+        오른쪽 하단의 <span>말풍선</span>을 클릭하시면 제가 만든 실시간 채팅
+        라이브러리를 통해 저와 채팅 하실 수 있습니다. <br />
+        감사합니다. :D
       </p>
       <div class="contact__container">
         <div class="contact__email">
@@ -304,19 +314,20 @@
           <a href="mailto:smpark7723@gmail.com" target="_blank">
             <i class="fas fa-at"></i>
           </a>
-          <p>smpark7723@gmail.com</ㅔ>
+          <p>smpark7723@gmail.com</p>
         </div>
         <div class="contact__links">
           <h2>GitHub Link</h2>
           <a href="https://github.com/starry-winter-night" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <p>github.com/starry-winter-night</h3>
+          <p>github.com/starry-winter-night</p>
         </div>
       </div>
       <p class="contact__rights">
         2021 software engineer smpark - All rights reserved
       </p>
     </section>
+    <script src="https://kit.fontawesome.com/4e74fd0580.js"></script>
   </body>
 </html>
