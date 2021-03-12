@@ -2,8 +2,7 @@ initStarryNight();
 function initStarryNight() {
   const backgroundColor = "rgba(2, 2, 14, 0.3)";
   const width = window.innerWidth;
-  const height = document.documentElement.scrollHeight;
-  console.log(height)
+  const height = window.innerHeight;
   const canvas = document.querySelector("#starryNightCanvas");
   const ctx = canvas.getContext("2d");
   canvas.width = width;
