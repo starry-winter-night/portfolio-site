@@ -105,6 +105,10 @@ canvas {
   height: 100%;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   color: var(--color-light-white);
   margin: 0;
