@@ -610,10 +610,10 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .aside__menu {
+  /* .aside__menu {
     padding-bottom: 30px;
     height: 70%;
-  }
+  } */
 
   .aside__smpchat img {
     width: 35px;
@@ -727,8 +727,9 @@ body {
 
   .aside__smpchat {
     position: absolute;
-    bottom: 25px;
-    right: 32%;
+    bottom: 63px;
+    left:0;
+    right:0;
   }
 
   .aside.active > .aside__smpchat {
