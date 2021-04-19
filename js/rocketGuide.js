@@ -1,5 +1,4 @@
-rocketGuide();
-function rocketGuide() {
+(function rocketGuide() {
   let prevScrollHeight = 0; // 스크롤시 0부터 시작.
   const rocketImg = document.querySelector(".navbar__rocket");
   const travelRoad = document.querySelector(".navbar__guide");
@@ -17,12 +16,30 @@ function rocketGuide() {
     updatePrevScrollHeight();
 
     function render() {
-      rocketImg.style.left = `${
-        calcRocketTravelDistance() + earthImg.clientWidth
-      }px`;
-      rocketImg.style.transform = rocektRotate();
+      const travelDistance = applyRocketMove();
+
+      rocketImg.style.transform = `${travelDistance()} ${chageRocketRotate()}`;
     }
-    function rocektRotate() {
+
+    function applyRocketMove() {
+      let startDistance = 50;
+      return () => {
+        let travelDistance = null;
+
+        if (!startDistance) {
+          travelDistance = calcRocketTravelDistance() + earthImg.clientWidth;
+        }
+
+        if (startDistance) {
+          travelDistance =
+            calcRocketTravelDistance() + earthImg.clientWidth - startDistance;
+          startDistance = null;
+        }
+
+        return `translateX(${travelDistance}px)`;
+      };
+    }
+    function chageRocketRotate() {
       return scrollHeight > prevScrollHeight
         ? "rotate(0deg)"
         : "rotate(180deg)";
@@ -63,4 +80,4 @@ function rocketGuide() {
       });
     };
   }
-}
+})();

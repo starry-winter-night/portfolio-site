@@ -1,14 +1,15 @@
-initStarryNight();
-function initStarryNight() {
+(function initStarryNight() {
   const backgroundColor = "rgba(2, 2, 14, 0.3)";
   const width = window.innerWidth;
   const height = window.innerHeight;
   const canvas = document.querySelector("#starryNightCanvas");
   const ctx = canvas.getContext("2d");
-  canvas.width = width;
-  canvas.height = height;
   let milkyWay = [];
   let shootingStar = null;
+
+  canvas.width = width;
+  canvas.height = height;
+
 
   createMilkyWayStar();
   shootingStar = createShootingStar();
@@ -64,7 +65,9 @@ function initStarryNight() {
     ctx.closePath();
     ctx.fillStyle = shootingStar.color;
     ctx.fill();
+
     const fallingHeight = directShootingStar();
+    
     if (
       shootingStar.x < 0 ||
       shootingStar.x > width ||
@@ -106,4 +109,4 @@ function initStarryNight() {
     drawShootingStar();
     requestAnimationFrame(renderStarryNight);
   }
-}
+})()
